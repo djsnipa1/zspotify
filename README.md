@@ -1,37 +1,23 @@
 # zspotify
-Fork of https://github.com/Footsiefat/zspotify
 
-Spotify song downloader without injecting into the windows client
-
+Fork of https://github.com/jsavargas/zspotify.git
 
 ## **Docker:**
 
+Run this command and login:
+
+```bash
+docker-compose run --rm zspotify
 ```
+
+Other Docker command:
+
+```bash
   docker run --rm -it -v $(pwd)/docker/config:/root/.config/ZSpotify -v $(pwd)/docker/download:/root/Music jsavargas/zspotify
-  
-  docker-compose run --rm zspotify
 ```
 
-
-
+## Command line usage:
 ```
-Requirements:
-
-Binaries
-
-    - Python 3.8 or greater
-    - ffmpeg*
-
-Python packages:
-
-    - pip install -r requirements.txt
-
-```
-\*ffmpeg can be installed via apt for Debian-based distros or by downloading the binaries from [ffmpeg.org](https://ffmpeg.org) and placing them in your %PATH% in Windows.
-
-
-```
-Command line usage:
   python zspotify.py                              Loads search prompt to find then download a specific track, album or playlist
 
 Extra command line options:
@@ -49,6 +35,21 @@ Special hardcoded options:
   FORCE_PREMIUM       Set this to True if ZSpotify isn't automatically detecting that you are using a premium account
   
 ```
+
+## Requirements (if not using docker)
+
+Binaries
+
+    - Python 3.8 or greater
+    - ffmpeg*
+
+Python packages:
+
+    - pip install -r requirements.txt
+
+```
+\*ffmpeg can be installed via apt for Debian-based distros or by downloading the binaries from [ffmpeg.org](https://ffmpeg.org) and placing them in your %PATH% in Windows.
+
 
 
 
